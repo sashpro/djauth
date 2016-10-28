@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div id="container">
+<div id="content">
+      <form action="{%url 'register'%}" method="post" enctype="multipart/form-data" id="form">
+      {% csrf_token %}
+      {{ form.as_p }}
+	   <button type="submit">Зарегистрироваться</button>
+	  </form>
+    </div>
+  </div>
+{% endblock %}
